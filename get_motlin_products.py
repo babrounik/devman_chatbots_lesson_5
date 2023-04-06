@@ -20,7 +20,7 @@ def main():
 
     headers = {'Authorization': f'Bearer {access_token}'}
     products_url = "https://api.moltin.com/pcm/products"
-    products_response = requests.post(products_url, headers=headers)
+    products_response = requests.get(products_url, headers=headers)
     products_response.raise_for_status()
     print(products_response.json())
 
